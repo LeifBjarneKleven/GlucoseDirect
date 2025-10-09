@@ -10,9 +10,18 @@ extension Data {
     var hex: String {
         map { String(format: "%02X", $0) }.joined(separator: " ")
     }
-    
+
     var utf8: String {
         String(decoding: self, as: UTF8.self)
+    }
+
+    private static let hexAlphabet = "0123456789abcdef".unicodeScalars.map { $0 }
+
+    public func hexEncodedString() -> String {
+        String(self.reduce(into: "".unicodeScalars) { result, value in
+            result.append(Data.hexAlphabet[Int(value / 16)])
+            result.append(Data.hexAlphabet[Int(value % 16)])
+        })
     }
 
     init?(hexString: String) {

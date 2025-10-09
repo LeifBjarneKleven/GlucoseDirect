@@ -35,6 +35,11 @@ class Libre2Connection: SensorBluetoothConnection, IsSensor {
     }
 
     override func checkRetrievedPeripheral(peripheral: CBPeripheral) -> Bool {
+        // Libre 2+ 2F sensors have `peripheral.name` set to their mac address instead of "Abbott<SERIAL>"
+        if let macAddress = sensor?.macAddress {
+            return peripheral.name?.lowercased() == macAddress.lowercased()
+        }
+
         if let sensorSerial = sensor?.serial {
             return peripheral.name?.lowercased() == "\(peripheralName)\(sensorSerial)"
         }
@@ -57,15 +62,27 @@ class Libre2Connection: SensorBluetoothConnection, IsSensor {
         DirectLog.info("Sensor: \(sensor)")
         DirectLog.info("ManufacturerData: \(manufacturerData)")
 
-        if manufacturerData.count == 8 {
+        var correctPeripheral = false
+
+        // with Libre 2+ 2F sensors we match using mac address instead of manufacturer data
+        if peripheral.name == sensor.macAddress {
+            DirectLog.info("Matched peripheral using MAC address: " + (sensor.macAddress ?? "-"))
+            correctPeripheral = true
+        } else if manufacturerData.count == 8 {
+            DirectLog.info("Matched peripheral using manufacturer data")
             var foundUUID = manufacturerData.subdata(in: 2 ..< 8)
             foundUUID.append(contentsOf: [0x07, 0xe0])
 
-            if foundUUID == sensor.uuid {
-                manager.stopScan()
-                connect(peripheral)
-            }
+            correctPeripheral = foundUUID == sensor.uuid
         }
+
+        guard correctPeripheral else {
+            return
+        }
+
+        // we discovered the correct peripheral and proceed to connect to it
+        manager.stopScan()
+        connect(peripheral)
     }
 
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
@@ -131,7 +148,7 @@ class Libre2Connection: SensorBluetoothConnection, IsSensor {
 
             if let sensor = sensor, let factoryCalibration = sensor.factoryCalibration, let uuid = sensor.uuid {
                 do {
-                    let decryptedBLE = Data(try Libre2EUtility.decryptBLE(uuid: uuid, data: rxBuffer))
+                    let decryptedBLE = try Data(Libre2EUtility.decryptBLE(uuid: uuid, data: rxBuffer))
                     let parsedBLE = Libre2EUtility.parseBLE(calibration: factoryCalibration, data: decryptedBLE)
 
                     if parsedBLE.age >= sensor.lifetime {

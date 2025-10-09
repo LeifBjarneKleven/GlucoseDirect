@@ -114,6 +114,14 @@ struct SensorView: View {
                                 Text(serial.description)
                             }
                         }
+
+                        if let macAddress = sensor.macAddress {
+                            HStack {
+                                Text("MAC address")
+                                Spacer()
+                                Text(macAddress)
+                            }
+                        }
                     },
                     header: {
                         Label("Sensor details", systemImage: "text.magnifyingglass")

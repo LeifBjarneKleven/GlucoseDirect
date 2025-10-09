@@ -178,7 +178,7 @@ class LibreNFC: NSObject, NFCTagReaderSessionDelegate {
                             break
                         }
 
-                        let sensor = Sensor.libreStyleSensor(uuid: sensorUID, patchInfo: patchInfo, fram: fram)
+                        var sensor = Sensor.libreStyleSensor(uuid: sensorUID, patchInfo: patchInfo, fram: fram)
 
                         if let factoryCalibration = sensor.factoryCalibration {
                             let readings = LibreUtility.parseFRAM(calibration: factoryCalibration, pairingTimestamp: sensor.pairingTimestamp, fram: fram)
@@ -192,6 +192,9 @@ class LibreNFC: NSObject, NFCTagReaderSessionDelegate {
                                     returnWithError(LibrePairingError.streamingNotEnabled)
                                     return
                                 }
+
+                                let macAddress = Data(streaminResponse.reversed()).hexEncodedString().uppercased()
+                                sensor.macAddress = macAddress
                             }
 
                             returnWithResult(isPaired: true, sensor: sensor, readings: readings.history + readings.trend)

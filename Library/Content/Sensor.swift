@@ -17,6 +17,7 @@ struct Sensor: Codable {
         uuid = nil
         patchInfo = nil
         factoryCalibration = nil
+        macAddress = nil
 
         self.family = family
         self.type = type
@@ -32,6 +33,7 @@ struct Sensor: Codable {
         pairingTimestamp = Date()
 
         fram = nil
+        macAddress = nil
 
         self.uuid = uuid
         self.patchInfo = patchInfo
@@ -48,6 +50,8 @@ struct Sensor: Codable {
 
     init(fram: Data, uuid: Data, patchInfo: Data, factoryCalibration: FactoryCalibration?, family: SensorFamily, type: SensorType, region: SensorRegion, serial: String?, state: SensorState, age: Int, lifetime: Int, warmupTime: Int = 60) {
         pairingTimestamp = Date()
+
+        macAddress = nil
 
         self.fram = fram
         self.uuid = uuid
@@ -97,6 +101,7 @@ struct Sensor: Codable {
         type = try container.decode(SensorType.self, forKey: .type)
         region = try container.decode(SensorRegion.self, forKey: .region)
         serial = try container.decode(String?.self, forKey: .serial)
+        macAddress = try container.decode(String?.self, forKey: .macAddress)
         state = try container.decode(SensorState.self, forKey: .state)
         age = try container.decode(Int.self, forKey: .age)
         lifetime = try container.decode(Int.self, forKey: .lifetime)
@@ -116,6 +121,7 @@ struct Sensor: Codable {
         case type
         case region
         case serial
+        case macAddress
         case state
         case age
         case lifetime
@@ -132,6 +138,7 @@ struct Sensor: Codable {
     let type: SensorType
     let region: SensorRegion
     let serial: String?
+    var macAddress: String?
     var state: SensorState
     var age: Int
     var lifetime: Int
@@ -154,7 +161,7 @@ struct Sensor: Codable {
     }
 
     var description: String {
-        "{ uuid: \(uuid?.hex ?? "-"), patchInfo: \(patchInfo?.hex ?? "-"), factoryCalibration: \(factoryCalibration), family: \(family), type: \(type), region: \(region), serial: \(serial ?? "-"), state: \(state.description), lifetime: \(lifetime.inTime) }"
+        "{ uuid: \(uuid?.hex ?? "-"), patchInfo: \(patchInfo?.hex ?? "-"), factoryCalibration: \(factoryCalibration), family: \(family), type: \(type), region: \(region), serial: \(serial ?? "-"), macAddress: \(macAddress ?? "-"), state: \(state.description), lifetime: \(lifetime.inTime) }"
     }
 
     var endTimestamp: Date? {
