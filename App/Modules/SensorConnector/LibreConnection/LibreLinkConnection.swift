@@ -1,6 +1,6 @@
 //
 //  LibreLinkConnection.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 
 import Combine

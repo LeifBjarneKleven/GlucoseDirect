@@ -1,6 +1,6 @@
 //
 //  GlucoseQuality.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 
 import Foundation

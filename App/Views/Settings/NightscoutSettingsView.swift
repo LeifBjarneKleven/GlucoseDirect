@@ -1,6 +1,6 @@
 //
 //  NightscoutSettingsView.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 
 import SwiftUI
@@ -16,7 +16,7 @@ struct NightscoutSettingsView: View {
         Section(
             content: {
                 Toggle("Nightscout upload enabled", isOn: nightscoutUpload)
-                    .toggleStyle(SwitchToggleStyle(tint: Color.ui.accent))
+                    .toggleStyle(SwitchToggleStyle(tint: AmberTheme.amber))
 
                 if store.state.nightscoutUpload {
                     VStack(alignment: .leading) {

@@ -1,6 +1,6 @@
 //
 //  Nightscout.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 
 import Combine

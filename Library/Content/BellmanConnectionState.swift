@@ -1,6 +1,6 @@
 //
 //  BellmanConnectionState.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 
 import Foundation

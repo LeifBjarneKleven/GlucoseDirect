@@ -1,6 +1,6 @@
 //
 //  VirtualConnection.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 
 import Combine

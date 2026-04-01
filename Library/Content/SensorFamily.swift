@@ -1,6 +1,6 @@
 //
 //  SensorFamily.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 
 import Foundation

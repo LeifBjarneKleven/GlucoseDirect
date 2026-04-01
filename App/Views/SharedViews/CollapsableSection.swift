@@ -1,6 +1,6 @@
 //
 //  CollapsableSection.swift
-//  GlucoseDirectApp
+//  DOSBTSApp
 //
 
 import SwiftUI

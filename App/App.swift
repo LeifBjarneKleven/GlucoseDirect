@@ -1,6 +1,6 @@
 //
 //  App.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 
 import CoreBluetooth
@@ -10,10 +10,10 @@ import SwiftUI
     import CoreNFC
 #endif
 
-// MARK: - GlucoseDirectApp
+// MARK: - DOSBTSApp
 
 @main
-struct GlucoseDirectApp: App {
+struct DOSBTSApp: App {
     // MARK: Lifecycle
 
     init() {
@@ -26,7 +26,7 @@ struct GlucoseDirectApp: App {
 
     // MARK: Internal
 
-    @UIApplicationDelegateAdaptor(GlucoseDirectAppDelegate.self) var appDelegate {
+    @UIApplicationDelegateAdaptor(DOSBTSAppDelegate.self) var appDelegate {
         didSet {
             oldValue.store = nil
             appDelegate.store = store
@@ -37,6 +37,7 @@ struct GlucoseDirectApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(self.store)
+                .preferredColorScheme(.dark)
         }
     }
 
@@ -45,9 +46,9 @@ struct GlucoseDirectApp: App {
     private let store: DirectStore = createStore()
 }
 
-// MARK: - GlucoseDirectAppDelegate
+// MARK: - DOSBTSAppDelegate
 
-class GlucoseDirectAppDelegate: NSObject, UIApplicationDelegate {
+class DOSBTSAppDelegate: NSObject, UIApplicationDelegate {
     weak var store: DirectStore?
 
     func applicationDidFinishLaunching(_ application: UIApplication) {
@@ -85,7 +86,7 @@ class GlucoseDirectAppDelegate: NSObject, UIApplicationDelegate {
 
 // MARK: UNUserNotificationCenterDelegate
 
-extension GlucoseDirectAppDelegate: UNUserNotificationCenterDelegate {
+extension DOSBTSAppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         DirectLog.info("Application will present notification")
 

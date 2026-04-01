@@ -1,6 +1,6 @@
 //
 //  Debug.swift
-//  GlucoseDirectApp
+//  DOSBTSApp
 //
 
 import Combine

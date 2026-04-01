@@ -1,6 +1,6 @@
 //
 //  SensorGlucoseActivityAttributes.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 
 import ActivityKit

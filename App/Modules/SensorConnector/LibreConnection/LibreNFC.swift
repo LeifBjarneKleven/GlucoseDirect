@@ -1,6 +1,6 @@
 //
 //  LibrePairing.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 //  Special thanks to: guidos
 //

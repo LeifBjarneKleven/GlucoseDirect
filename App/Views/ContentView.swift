@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 
 import WidgetKit
@@ -54,10 +54,14 @@ struct ContentView: View {
             .onAppear {
                 DirectLog.info("onAppear()")
 
-                let apparence = UITabBarAppearance()
-                apparence.configureWithOpaqueBackground()
+                let appearance = UITabBarAppearance()
+                appearance.configureWithOpaqueBackground()
+                appearance.backgroundColor = .black
 
-                UITabBar.appearance().scrollEdgeAppearance = apparence
+                UITabBar.appearance().scrollEdgeAppearance = appearance
+                UITabBar.appearance().standardAppearance = appearance
+                UITabBar.appearance().unselectedItemTintColor = UIColor(AmberTheme.amberDark)
+                UITabBar.appearance().tintColor = UIColor(AmberTheme.amber)
             }
         }
     }

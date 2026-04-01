@@ -1,6 +1,6 @@
 //
 //  Alarm.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 //  Created by Reimar Metzen on 14.01.23.
 //

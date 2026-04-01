@@ -1,6 +1,6 @@
 //
 //  Transmitter.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 
 import Foundation

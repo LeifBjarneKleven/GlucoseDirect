@@ -1,8 +1,8 @@
 /* Bundle display name */
-"CFBundleDisplayName" = "Glucose Direct";
+"CFBundleDisplayName" = "DOSBTS";
 
 /* Bundle name */
-"CFBundleName" = "Glucose Direct";
+"CFBundleName" = "DOSBTS";
 
 /* Privacy - NFC Scan Usage Description */
 "NFCReaderUsageDescription" = "De NFC-functie is nodig om alle verbindingsinstellingen uit te lezen voordat een Bluetooth-verbinding tot stand komt.";

@@ -1,6 +1,6 @@
 //
 //  DirectStore.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 
 import Foundation

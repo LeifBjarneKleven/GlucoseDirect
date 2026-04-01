@@ -1,6 +1,6 @@
 //
 //  SensorConnectorSettings.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 
 import SwiftUI

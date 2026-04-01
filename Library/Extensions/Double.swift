@@ -1,6 +1,6 @@
 //
 //  Double.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 
 import Foundation

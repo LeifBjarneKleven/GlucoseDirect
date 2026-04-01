@@ -1,6 +1,6 @@
 //
 //  Lazy.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 
 import Dispatch

@@ -1,8 +1,8 @@
 /* Bundle display name */
-"CFBundleDisplayName" = "Glucose Direct";
+"CFBundleDisplayName" = "DOSBTS";
 
 /* Bundle name */
-"CFBundleName" = "Glucose Direct";
+"CFBundleName" = "DOSBTS";
 
 /* Privacy - NFC Scan Usage Description */
 "NFCReaderUsageDescription" = "在进行蓝牙连接之前需要使用NFC扫描建立连接。";

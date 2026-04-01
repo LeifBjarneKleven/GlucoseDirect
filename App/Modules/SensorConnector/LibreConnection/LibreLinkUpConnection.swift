@@ -1,6 +1,6 @@
 //
 //  LibreLinkUpConnection.swift
-//  GlucoseDirectApp
+//  DOSBTSApp
 //
 
 import Combine

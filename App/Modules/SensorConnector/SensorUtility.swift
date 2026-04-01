@@ -1,6 +1,6 @@
 //
 //  SensorUtility.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 //  Special thanks to: guidos, ivalkou and dabear and many others
 //  https://github.com/ivalkou/LibreTools/blob/master/Sources/LibreTools/Sensor/Libre2.swift

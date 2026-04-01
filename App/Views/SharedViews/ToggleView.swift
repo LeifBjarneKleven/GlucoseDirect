@@ -1,6 +1,6 @@
 //
 //  ToggleView.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 
 import SwiftUI
@@ -42,7 +42,7 @@ struct ToggleView: View {
             return Color.clear
         }
 
-        return Color.ui.accent
+        return AmberTheme.amber
     }
 
     var body: some View {

@@ -1,6 +1,6 @@
 //
 //  NotificationCenterService.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 
 import AudioToolbox

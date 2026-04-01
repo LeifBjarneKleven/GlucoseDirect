@@ -1,6 +1,6 @@
 //
 //  AdditionalSettings.swift
-//  GlucoseDirectApp
+//  DOSBTSApp
 //
 //  Created by Reimar Metzen on 16.01.23.
 //
@@ -14,11 +14,11 @@ struct AdditionalSettingsView: View {
         Section(
             content: {
                 if DirectConfig.showSmoothedGlucose {
-                    Toggle("Show smoothed glucose", isOn: showSmoothedGlucose).toggleStyle(SwitchToggleStyle(tint: Color.ui.accent))
+                    Toggle("Show smoothed glucose", isOn: showSmoothedGlucose).toggleStyle(SwitchToggleStyle(tint: AmberTheme.amber))
                 }
                 
                 if DirectConfig.showInsulinInput {
-                    Toggle("Show insulin input", isOn: showInsulinInput).toggleStyle(SwitchToggleStyle(tint: Color.ui.accent))
+                    Toggle("Show insulin input", isOn: showInsulinInput).toggleStyle(SwitchToggleStyle(tint: AmberTheme.amber))
                 }
             },
             header: {

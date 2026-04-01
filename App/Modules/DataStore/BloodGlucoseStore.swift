@@ -1,6 +1,6 @@
 //
 //  BloodGlucoseStore.swift
-//  GlucoseDirectApp
+//  DOSBTSApp
 //
 //  https://github.com/groue/GRDB.swift
 //

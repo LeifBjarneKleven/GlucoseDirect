@@ -1,6 +1,6 @@
 //
 //  AppConfig.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 
 import Foundation
@@ -8,7 +8,7 @@ import Foundation
 // MARK: - AppConfig
 
 enum DirectConfig {
-    static let appSchemaURL = URL(string: "glucosedirect://")
+    static let appSchemaURL = URL(string: "dosbts://")
     static let bubbleID = "bubble"
     static let calibrationsViewTag = 3
     static let crowdinURL = "https://crwd.in/glucose-direct-app"
@@ -25,7 +25,7 @@ enum DirectConfig {
     static let minGlucoseStatisticsDays = 7
     static let minReadableGlucose = 39
     static let overviewViewTag = 1
-    static let projectName = "GlucoseDirect"
+    static let projectName = "DOSBTS"
     static let settingsViewTag = 4
     static let smoothThresholdSeconds: Double = 15 * 60
     static let timegroupRounding = 15

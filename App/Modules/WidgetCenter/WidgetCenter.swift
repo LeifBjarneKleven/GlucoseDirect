@@ -1,6 +1,6 @@
 //
 //  Widget.swift
-//  GlucoseDirectApp
+//  DOSBTSApp
 //
 
 import ActivityKit

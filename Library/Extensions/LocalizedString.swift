@@ -1,6 +1,6 @@
 //
 //  LocalizedBundleString.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 
 import Foundation

@@ -1,6 +1,6 @@
 //
 //  SensorGlucose.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 //  https://www.jaeb.org/gmi/
 //  GMI(%) = 3.31 + 0.02392 x [mean glucose in mg/dL]

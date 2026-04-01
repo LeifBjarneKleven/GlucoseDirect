@@ -1,6 +1,6 @@
 //
 //  SensorConnectionInfo.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 
 import Combine

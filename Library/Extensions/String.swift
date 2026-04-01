@@ -1,6 +1,6 @@
 //
 //  String.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 
 import CommonCrypto

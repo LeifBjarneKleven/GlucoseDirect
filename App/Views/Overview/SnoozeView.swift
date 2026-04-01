@@ -1,6 +1,6 @@
 //
 //  AlarmSnoozeView.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 
 import SwiftUI

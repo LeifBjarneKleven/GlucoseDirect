@@ -1,6 +1,6 @@
 //
 //  Float.swift
-//  GlucoseDirectApp
+//  DOSBTSApp
 //
 //  Created by Reimar Metzen on 16.01.23.
 //

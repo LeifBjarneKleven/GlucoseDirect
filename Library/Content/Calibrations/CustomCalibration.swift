@@ -1,6 +1,6 @@
 //
 //  CustomCalibration.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 //  Special thanks to: ivalko, raywenderlich
 //

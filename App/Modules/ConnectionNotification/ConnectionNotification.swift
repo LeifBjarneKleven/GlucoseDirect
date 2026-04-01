@@ -1,6 +1,6 @@
 //
 //  SensorConnectionLostAlert.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 
 import Combine

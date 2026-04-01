@@ -1,6 +1,6 @@
 //
 //  SensorErrorStore.swift
-//  GlucoseDirect
+//  DOSBTS
 //
 
 import Combine
